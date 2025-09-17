@@ -7,7 +7,6 @@ from bleach.html5lib_shim import Filter
 from bleach.sanitizer import ALLOWED_PROTOCOLS, Cleaner, NoCssSanitizerWarning
 from bleach._vendor.html5lib.constants import rcdataElements
 
-
 @pytest.mark.parametrize(
     "data",
     [
