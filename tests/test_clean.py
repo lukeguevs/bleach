@@ -32,7 +32,6 @@ def test_clean_idempotent_img():
     dirty = '<imr src="http://example.com?foo=bar&bar=foo&amp;biz=bash">'
     assert clean(clean(dirty, tags=tags), tags=tags) == clean(dirty, tags=tags)
 
-
 def test_only_text_is_cleaned():
     some_text = "text"
     some_type = int
@@ -47,7 +46,6 @@ def test_only_text_is_cleaned():
     with pytest.raises(TypeError) as e:
         clean(no_type)
     assert "NoneType" in str(e.value)
-
 
 def test_empty():
     assert clean("") == ""
